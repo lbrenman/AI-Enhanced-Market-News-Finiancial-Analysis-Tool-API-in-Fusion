@@ -1,0 +1,88 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Market Insights API",
+    "version": "1.0.0",
+    "description": "API to fetch the latest market news and insights."
+  },
+  "paths": {
+    "/marketnewsinsights": {
+      "get": {
+        "summary": "Get the latest market news and insights",
+        "responses": {
+          "200": {
+            "description": "Successful response with market news and insights",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "MarketNews": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "category": { "type": "string" },
+                          "datetime": { "type": "integer" },
+                          "headline": { "type": "string" },
+                          "id": { "type": "integer" },
+                          "image": { "type": "string" },
+                          "related": { "type": "string" },
+                          "source": { "type": "string" },
+                          "summary": { "type": "string" },
+                          "url": { "type": "string" }
+                        }
+                      }
+                    },
+                    "insights": {
+                      "type": "object",
+                      "properties": {
+                        "MarketSentiment": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "category": { "type": "string" },
+                              "sentiment": { "type": "string" },
+                              "keyPoints": {
+                                "type": "array",
+                                "items": { "type": "string" }
+                              }
+                            }
+                          }
+                        },
+                        "ConsumerBehaviorInsights": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "trend": { "type": "string" },
+                              "impact": { "type": "string" },
+                              "description": { "type": "string" }
+                            }
+                          }
+                        },
+                        "VolatilityAndInvestmentInsights": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "assetClass": { "type": "string" },
+                              "volatility": { "type": "string" },
+                              "investmentOpportunity": { "type": "string" },
+                              "riskLevel": { "type": "string" }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
