@@ -65,7 +65,7 @@ Enhanced contact API created in Amplify Fusion that demonstrates how to leverage
     "system_fingerprint": "fp_7c63087da1"
     }
     ```
-* You can see the API in action in a sample Web app [here]()
+* You can see the API in action in a sample Web app [here](https://github.com/lbrenman/Enhanced-Market-News-Analysis-Nodejs-Web-App)
 * Some screen shots from the Fusion project are shown below:
 ![Imgur](https://i.imgur.com/txk7hTZ.png)
 ![Imgur](https://i.imgur.com/y0Y6Yag.png)
